@@ -1,0 +1,61 @@
+{
+  "title": "Unified RAG Evaluation: BM25 + FAISS + Concept Tagging (SNOMED/MeSH/DOID/SYMP) + Phase 8 Intent Reranking",
+  "scope_30": {
+    "queries": 30,
+    "chunks": 46,
+    "pages": "22-51",
+    "results": {
+      "A: Baseline (BM25+Dense)": {
+        "precision@1": 0.4,
+        "recall@1": 0.1889,
+        "precision@3": 0.2333,
+        "recall@3": 0.3222,
+        "precision@5": 0.2,
+        "recall@5": 0.4611,
+        "mrr": 0.4639,
+        "map": 0.3323,
+        "ndcg@5": 0.4021
+      },
+      "B: + Concept Tagging": {
+        "precision@1": 0.3333,
+        "recall@1": 0.1667,
+        "precision@3": 0.2111,
+        "recall@3": 0.2944,
+        "precision@5": 0.18,
+        "recall@5": 0.4222,
+        "mrr": 0.4444,
+        "map": 0.2951,
+        "ndcg@5": 0.3662
+      },
+      "C: + Phase 8 Intent Rerank": {
+        "precision@1": 0.4,
+        "recall@1": 0.2111,
+        "precision@3": 0.2556,
+        "recall@3": 0.3667,
+        "precision@5": 0.2133,
+        "recall@5": 0.4889,
+        "mrr": 0.4722,
+        "map": 0.3536,
+        "ndcg@5": 0.424
+      },
+      "D: Full Unified (Concepts+Intent)": {
+        "precision@1": 0.3333,
+        "recall@1": 0.1667,
+        "precision@3": 0.2444,
+        "recall@3": 0.3611,
+        "precision@5": 0.1933,
+        "recall@5": 0.4444,
+        "mrr": 0.4556,
+        "map": 0.3198,
+        "ndcg@5": 0.3898
+      }
+    }
+  },
+  "ontology_coverage": {
+    "snomed_records": 383853,
+    "mesh_records": 31110,
+    "doid_records": 12247,
+    "symp_records": 895,
+    "total_records": 428105
+  }
+}

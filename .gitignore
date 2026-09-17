@@ -1,0 +1,44 @@
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Large Binary & Model Files (>50MB / GitHub limits)
+ontology_store.pkl
+mesh.db
+chunk_concepts_diagnostics_demo.json
+chunk_concepts_expanded.json
+demo_expanded.json
+
+# Raw Heavy Datasets & Big Archives
+SnomedCT_InternationalRF2_PRODUCTION_20260801T120000Z/
+snomed_test_workspace/
+chroma_nursing_db/
+scratch/
+
+# Textbooks and Slices (Copyright / Large binaries)
+*.pdf
+!pipeline_metric_results.pdf
+!unified_concept_intent_evaluation_report.pdf
+!phase8_30_eval_report.pdf
+!hyde_30_eval_report.pdf
+!baseline_30_eval_report.pdf
+!augmented_30_eval_report.pdf
+
+# Sensitive & Environment keys
+.env
+*.env
+*.log
+
+# IDE & OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

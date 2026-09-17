@@ -1,0 +1,1012 @@
+{
+  "benchmark": "eval_queries_30_baseline.json",
+  "pipeline": "Intent-Based Query Augmentation + Abstract Context Enriched RAG",
+  "total_queries": 30,
+  "retrieval_summary": {
+    "precision@1": 0.4667,
+    "recall@1": 0.2611,
+    "precision@3": 0.3444,
+    "recall@3": 0.55,
+    "precision@5": 0.2733,
+    "recall@5": 0.7222,
+    "mrr": 0.5978,
+    "map": 0.5008,
+    "ndcg@5": 0.5853,
+    "context_recall": 0.7222,
+    "context_precision": 0.2733,
+    "context_sufficiency": 0.8667,
+    "context_noise_ratio": 0.7267
+  },
+  "generation_summary": {
+    "rouge1_f1": 0.3373,
+    "rouge2_f1": 0.149,
+    "rougeL_f1": 0.2539,
+    "bleu1": 0.2373,
+    "bleu2": 0.1535,
+    "bleu4": 0.06,
+    "citation_precision": 1.0,
+    "citation_coverage": 0.7944,
+    "faithfulness": 1.0,
+    "relevance": 0.691
+  },
+  "per_query_analysis": [
+    {
+      "query_id": "eval30_01",
+      "question": "What are the five steps of the nursing process, and what is the purpose of each step?",
+      "gold_intent": "definition_process",
+      "gold_chunk_ids": [
+        "nursing_handbook_v1_p00022_c001",
+        "nursing_handbook_v1_p00023_c002",
+        "nursing_handbook_v1_p00024_c001"
+      ],
+      "retrieved_chunk_ids": [
+        "nursing_handbook_v1_p00024_c001",
+        "nursing_handbook_v1_p00022_c001",
+        "nursing_handbook_v1_p00023_c002",
+        "nursing_handbook_v1_p00025_c002",
+        "nursing_handbook_v1_p00032_c001"
+      ],
+      "answer": "The five steps of the nursing process, remembered by the acronym ADPIE, are Assess, Diagnose, Plan, Implement, and Evaluate. Each step serves a specific purpose in guiding professional nursing practice and client care.\n\nKey nursing points:\nThe five steps and their purposes are: 1. Assess (perform a nursing assessment by gathering subjective and objective data); 2. Diagnose (identify and make nursing diagnoses); 3. Plan (formulate and write outcome/goal statements and determine appropriate nursing interventions based on evidence and the client's reality); 4. Implement (apply nursing care interventions to achieve client outcomes); and 5. Evaluate (appraise the outcomes and the nursing care implemented, and make necessary revisions as needed).",
+      "sources": [
+        "nursing_handbook_v1_p00024_c001",
+        "nursing_handbook_v1_p00022_c001",
+        "nursing_handbook_v1_p00023_c002"
+      ],
+      "metrics": {
+        "rouge1_f1": 0.4815,
+        "rouge2_f1": 0.2625,
+        "rougeL_f1": 0.4321,
+        "bleu1": 0.3545,
+        "bleu2": 0.2614,
+        "bleu4": 0.1405,
+        "citation_precision": 1.0,
+        "citation_coverage": 1.0,
+        "faithfulness": 1.0,
+        "relevance": 0.8462
+      }
+    },
+    {
+      "query_id": "eval30_02",
+      "question": "What is clinical reasoning in nursing, and how does a nurse use it to identify client problems and guide care?",
+      "gold_intent": "definition",
+      "gold_chunk_ids": [
+        "nursing_handbook_v1_p00023_c002",
+        "nursing_handbook_v1_p00025_c001"
+      ],
+      "retrieved_chunk_ids": [
+        "nursing_handbook_v1_p00023_c002",
+        "nursing_handbook_v1_p00032_c001",
+        "nursing_handbook_v1_p00024_c001",
+        "nursing_handbook_v1_p00025_c001",
+        "nursing_handbook_v1_p00027_c001"
+      ],
+      "answer": "Clinical reasoning is an inherent, logical, and iterative process within the nursing process by which the nurse gathers data, recognizes patterns in client responses, processes information, synthesizes knowledge, and makes clinical judgments to analyze and understand client concerns, determine needs and goals, and form decisions to guide care.\n\nKey nursing points:\nClinical reasoning is used by nurses to gather cues (such as assessment and outcome data), process information to understand client needs and goals (diagnosis), initiate and adjust a plan of care (planning and implementation), observe and evaluate outcomes, and reflect on the client-nurse interaction. It employs complex cognitive processes involving formal and informal thinking strategies to analyze client information, evaluate the significance of findings, and weigh alternative actions.",
+      "sources": [
+        "nursing_handbook_v1_p00023_c002",
+        "nursing_handbook_v1_p00025_c001"
+      ],
+      "metrics": {
+        "rouge1_f1": 0.4444,
+        "rouge2_f1": 0.1875,
+        "rougeL_f1": 0.2963,
+        "bleu1": 0.3,
+        "bleu2": 0.1945,
+        "bleu4": 0.1054,
+        "citation_precision": 1.0,
+        "citation_coverage": 1.0,
+        "faithfulness": 1.0,
+        "relevance": 0.6842
+      }
+    },
+    {
+      "query_id": "eval30_03",
+      "question": "What information should a nurse collect when developing the client's “patient story”?",
+      "gold_intent": "assessment",
+      "gold_chunk_ids": [
+        "nursing_handbook_v1_p00023_c001",
+        "nursing_handbook_v1_p00023_c002",
+        "nursing_handbook_v1_p00024_c001"
+      ],
+      "retrieved_chunk_ids": [
+        "nursing_handbook_v1_p00023_c001",
+        "nursing_handbook_v1_p00024_c002",
+        "nursing_handbook_v1_p00023_c002",
+        "nursing_handbook_v1_p00029_c002",
+        "nursing_handbook_v1_p00024_c001"
+      ],
+      "answer": "To develop the client's \"patient's story,\" a nurse should collect a holistic collection of objective and subjective client information, including physiological, psychological, family, and social characteristics; available resources; environmental context; knowledge; motivation; spiritual and socioeconomic characteristics; and the client's perception of their health state.\n\nKey nursing points:\nThe \"patient's story\" is a holistic collection of subjective and objective information describing the client as a person beyond their medical history. Specific aspects include physiological, psychological, family, and social characteristics, available resources, environmental context, knowledge, motivation, spiritual and socioeconomic characteristics, and how illness or wellness has affected the client, including the client's perception of their health state.",
+      "sources": [
+        "nursing_handbook_v1_p00023_c001",
+        "nursing_handbook_v1_p00023_c002"
+      ],
+      "metrics": {
+        "rouge1_f1": 0.4841,
+        "rouge2_f1": 0.2194,
+        "rougeL_f1": 0.3694,
+        "bleu1": 0.3455,
+        "bleu2": 0.2321,
+        "bleu4": 0.0899,
+        "citation_precision": 1.0,
+        "citation_coverage": 0.6667,
+        "faithfulness": 1.0,
+        "relevance": 0.7692
+      }
+    },
+    {
+      "query_id": "eval30_04",
+      "question": "What is the difference between subjective and objective assessment data, and how are both used in forming a nursing diagnosis?",
+      "gold_intent": "comparison",
+      "gold_chunk_ids": [
+        "nursing_handbook_v1_p00024_c002",
+        "nursing_handbook_v1_p00026_c001",
+        "nursing_handbook_v1_p00026_c003"
+      ],
+      "retrieved_chunk_ids": [
+        "nursing_handbook_v1_p00026_c001",
+        "nursing_handbook_v1_p00024_c002",
+        "nursing_handbook_v1_p00022_c001",
+        "nursing_handbook_v1_p00023_c002",
+        "nursing_handbook_v1_p00028_c001"
+      ],
+      "answer": "Subjective information is obtained verbally from the client, whereas objective information is obtained by performing a physical assessment, taking vital signs, and noting diagnostic test results. Information from all of these sources is used to formulate a nursing diagnosis.\n\nKey nursing points:\nAssessment data includes both subjective (verbally obtained from the client) and objective (from physical assessments, vital signs, and diagnostic test results) information, which together make up the client's story and are used by the nurse to cluster symptoms and formulate a nursing diagnosis.",
+      "sources": [
+        "nursing_handbook_v1_p00024_c002"
+      ],
+      "metrics": {
+        "rouge1_f1": 0.1926,
+        "rouge2_f1": 0.0451,
+        "rougeL_f1": 0.163,
+        "bleu1": 0.1512,
+        "bleu2": 0.073,
+        "bleu4": 0.0,
+        "citation_precision": 1.0,
+        "citation_coverage": 0.5,
+        "faithfulness": 1.0,
+        "relevance": 0.6842
+      }
+    },
+    {
+      "query_id": "eval30_05",
+      "question": "How should a nurse use the PES system to formulate a three-part nursing diagnosis?",
+      "gold_intent": "diagnosis",
+      "gold_chunk_ids": [
+        "nursing_handbook_v1_p00025_c001",
+        "nursing_handbook_v1_p00025_c002",
+        "nursing_handbook_v1_p00027_c002"
+      ],
+      "retrieved_chunk_ids": [
+        "nursing_handbook_v1_p00025_c001",
+        "nursing_handbook_v1_p00025_c002",
+        "nursing_handbook_v1_p00027_c002",
+        "nursing_handbook_v1_p00027_c001",
+        "nursing_handbook_v1_p00024_c001"
+      ],
+      "answer": "To formulate a three-part nursing diagnosis using the PES system, the nurse should first look at the S (symptoms), which are the defining characteristics gathered from the assessment, and then formulate the complete three-part statement consisting of the Problem, Etiology, and Symptoms [nursing_handbook_v1_p00025_c001].\n\nKey nursing points:\nThe three-part PES system consists of: P (problem), which is the nursing diagnosis label taken from the official NANDA-I list representing a pattern of related cues; E (etiology), which is the related-to (r/t) phrase representing the related cause or contributor; and S (symptoms), which is the defining characteristics phrase identifying the signs and symptoms found during assessment [nursing_handbook_v1_p00025_c001].",
+      "sources": [
+        "nursing_handbook_v1_p00025_c001"
+      ],
+      "metrics": {
+        "rouge1_f1": 0.4625,
+        "rouge2_f1": 0.3038,
+        "rougeL_f1": 0.3875,
+        "bleu1": 0.3364,
+        "bleu2": 0.2721,
+        "bleu4": 0.1495,
+        "citation_precision": 1.0,
+        "citation_coverage": 0.3333,
+        "faithfulness": 1.0,
+        "relevance": 0.8571
+      }
+    },
+    {
+      "query_id": "eval30_06",
+      "question": "What are defining characteristics and related factors in a nursing diagnosis, and how do they differ?",
+      "gold_intent": "comparison",
+      "gold_chunk_ids": [
+        "nursing_handbook_v1_p00025_c001",
+        "nursing_handbook_v1_p00025_c002"
+      ],
+      "retrieved_chunk_ids": [
+        "nursing_handbook_v1_p00025_c001",
+        "nursing_handbook_v1_p00025_c002",
+        "nursing_handbook_v1_p00027_c001",
+        "nursing_handbook_v1_p00026_c003",
+        "nursing_handbook_v1_p00028_c002"
+      ],
+      "answer": "Defining characteristics are observable cues or inferences that cluster as manifestations of an actual or wellness nursing diagnosis (signs and symptoms), whereas related factors (also called etiological factors) are antecedent factors shown to have a patterned relationship with the human response, such as a cause or contributing factor.\n\nKey nursing points:\nDefining characteristics are the symptoms or signs identified in the assessment phase (often connected using the phrase 'as evidenced by'), representing the third part of a three-part diagnostic system [nursing_handbook_v1_p00025_c001, nursing_handbook_v1_p00025_c002, nursing_handbook_v1_p00027_c001]. In contrast, related factors are the second part of a nursing diagnosis (the 'related to' or r/t statement) and serve as circumstances, facts, influences, or etiologies that show a patterned relationship with the nursing response [nursing_handbook_v1_p00025_c001, nursing_handbook_v1_p00025_c002, nursing_handbook_v1_p00027_c001].",
+      "sources": [
+        "nursing_handbook_v1_p00025_c001",
+        "nursing_handbook_v1_p00025_c002",
+        "nursing_handbook_v1_p00027_c001"
+      ],
+      "metrics": {
+        "rouge1_f1": 0.4663,
+        "rouge2_f1": 0.2609,
+        "rougeL_f1": 0.3681,
+        "bleu1": 0.3089,
+        "bleu2": 0.2306,
+        "bleu4": 0.1531,
+        "citation_precision": 1.0,
+        "citation_coverage": 1.0,
+        "faithfulness": 1.0,
+        "relevance": 0.6667
+      }
+    },
+    {
+      "query_id": "eval30_07",
+      "question": "How does a nurse distinguish between a problem-focused nursing diagnosis and a risk nursing diagnosis?",
+      "gold_intent": "diagnosis",
+      "gold_chunk_ids": [
+        "nursing_handbook_v1_p00025_c001",
+        "nursing_handbook_v1_p00025_c002",
+        "nursing_handbook_v1_p00026_c001"
+      ],
+      "retrieved_chunk_ids": [
+        "nursing_handbook_v1_p00025_c002",
+        "nursing_handbook_v1_p00027_c002",
+        "nursing_handbook_v1_p00026_c001",
+        "nursing_handbook_v1_p00027_c001",
+        "nursing_handbook_v1_p00025_c001"
+      ],
+      "answer": "A nurse distinguishes between a problem-focused nursing diagnosis and a risk nursing diagnosis based on whether an undesirable human response currently exists or if the client is merely susceptible to developing one.\n\nKey nursing points:\nA problem-focused diagnosis is defined as a clinical judgment concerning an undesirable human response to a health condition or life process that currently exists in an individual, family, group, or community. In contrast, a risk nursing diagnosis is a clinical judgment concerning the susceptibility of an individual, caregiver, family, group, or community for developing an undesirable human response to health conditions or life processes (such as a client who is concerned about falling but has not fallen previously).",
+      "sources": [
+        "nursing_handbook_v1_p00025_c002",
+        "nursing_handbook_v1_p00026_c001",
+        "nursing_handbook_v1_p00025_c001"
+      ],
+      "metrics": {
+        "rouge1_f1": 0.2609,
+        "rouge2_f1": 0.1132,
+        "rougeL_f1": 0.2236,
+        "bleu1": 0.1826,
+        "bleu2": 0.1201,
+        "bleu4": 0.0462,
+        "citation_precision": 1.0,
+        "citation_coverage": 1.0,
+        "faithfulness": 1.0,
+        "relevance": 0.75
+      }
+    },
+    {
+      "query_id": "eval30_08",
+      "question": "What factors should a nurse consider when prioritizing multiple nursing diagnoses for a client?",
+      "gold_intent": "clinical_reasoning",
+      "gold_chunk_ids": [
+        "nursing_handbook_v1_p00023_c002",
+        "nursing_handbook_v1_p00025_c002",
+        "nursing_handbook_v1_p00026_c003"
+      ],
+      "retrieved_chunk_ids": [
+        "nursing_handbook_v1_p00029_c001",
+        "nursing_handbook_v1_p00027_c001",
+        "nursing_handbook_v1_p00030_c003",
+        "nursing_handbook_v1_p00028_c001",
+        "nursing_handbook_v1_p00034_c002"
+      ],
+      "answer": "Nursing diagnoses are prioritized based on urgent needs, defining characteristics, and frameworks such as ABCs, safety, and Maslow's hierarchy of needs.\n\nKey nursing points:\nAccording to the planning phase guidelines, nurses prioritize client needs by considering urgent needs, defining characteristics, and established frameworks including the ABCs, safety, and Maslow's hierarchy of needs [nursing_handbook_v1_p00029_c001].",
+      "sources": [
+        "nursing_handbook_v1_p00029_c001"
+      ],
+      "metrics": {
+        "rouge1_f1": 0.2292,
+        "rouge2_f1": 0.0426,
+        "rougeL_f1": 0.1667,
+        "bleu1": 0.2,
+        "bleu2": 0.0861,
+        "bleu4": 0.0,
+        "citation_precision": 1.0,
+        "citation_coverage": 0.0,
+        "faithfulness": 1.0,
+        "relevance": 0.2308
+      }
+    },
+    {
+      "query_id": "eval30_09",
+      "question": "How should a nurse determine whether a proposed nursing diagnosis is appropriate for a client's assessment findings?",
+      "gold_intent": "diagnosis",
+      "gold_chunk_ids": [
+        "nursing_handbook_v1_p00026_c003",
+        "nursing_handbook_v1_p00027_c001",
+        "nursing_handbook_v1_p00038_c001"
+      ],
+      "retrieved_chunk_ids": [
+        "nursing_handbook_v1_p00038_c001",
+        "nursing_handbook_v1_p00027_c001",
+        "nursing_handbook_v1_p00030_c001",
+        "nursing_handbook_v1_p00025_c001",
+        "nursing_handbook_v1_p00024_c001"
+      ],
+      "answer": "The nurse should evaluate the suggested nursing diagnosis to determine if it is appropriate for the client and supported by assessment information, and use Section III to validate the information against the definition, defining characteristics, risk factors, related factors, at-risk populations, and associated conditions [nursing_handbook_v1_p00038_c001].\n\nKey nursing points:\nTo ensure appropriateness, the nurse assesses the client, notes suggested diagnoses from the alphabetical listing in Section II, and evaluates whether the diagnosis is supported by assessment findings [nursing_handbook_v1_p00038_c001]. The nurse then uses Section III to check the NANDA-I definitions, defining characteristics, and related factors, and can also verify if the nursing diagnosis aligns logically with the client's medical diagnosis [nursing_handbook_v1_p00038_c001, nursing_handbook_v1_p00027_c001].",
+      "sources": [
+        "nursing_handbook_v1_p00038_c001",
+        "nursing_handbook_v1_p00027_c001"
+      ],
+      "metrics": {
+        "rouge1_f1": 0.3522,
+        "rouge2_f1": 0.1656,
+        "rougeL_f1": 0.239,
+        "bleu1": 0.2478,
+        "bleu2": 0.1696,
+        "bleu4": 0.0,
+        "citation_precision": 1.0,
+        "citation_coverage": 1.0,
+        "faithfulness": 1.0,
+        "relevance": 0.8125
+      }
+    },
+    {
+      "query_id": "eval30_10",
+      "question": "What is the role of measurable outcomes and goals during the planning phase of the nursing process?",
+      "gold_intent": "planning",
+      "gold_chunk_ids": [
+        "nursing_handbook_v1_p00028_c001",
+        "nursing_handbook_v1_p00029_c001",
+        "nursing_handbook_v1_p00029_c002"
+      ],
+      "retrieved_chunk_ids": [
+        "nursing_handbook_v1_p00022_c001",
+        "nursing_handbook_v1_p00030_c003",
+        "nursing_handbook_v1_p00029_c001",
+        "nursing_handbook_v1_p00023_c002",
+        "nursing_handbook_v1_p00024_c002"
+      ],
+      "answer": "Measurable goals and outcomes are required to be identified alongside nursing interventions for a successful plan of care during the planning phase.\n\nKey nursing points:\nDuring the planning phase, it is necessary to identify measurable goals and outcomes, including nursing interventions, to ensure a successful plan of care [nursing_handbook_v1_p00029_c001]. Outcome statements can be guided by the SMART acronym to help ensure they are measurable [nursing_handbook_v1_p00029_c001].",
+      "sources": [
+        "nursing_handbook_v1_p00029_c001"
+      ],
+      "metrics": {
+        "rouge1_f1": 0.2941,
+        "rouge2_f1": 0.04,
+        "rougeL_f1": 0.1961,
+        "bleu1": 0.2308,
+        "bleu2": 0.0849,
+        "bleu4": 0.0,
+        "citation_precision": 1.0,
+        "citation_coverage": 1.0,
+        "faithfulness": 1.0,
+        "relevance": 0.7857
+      }
+    },
+    {
+      "query_id": "eval30_11",
+      "question": "How should a nurse evaluate whether nursing interventions have been effective, and what should be done when the desired outcomes are not met?",
+      "gold_intent": "evaluation",
+      "gold_chunk_ids": [
+        "nursing_handbook_v1_p00022_c001",
+        "nursing_handbook_v1_p00023_c002",
+        "nursing_handbook_v1_p00024_c001"
+      ],
+      "retrieved_chunk_ids": [
+        "nursing_handbook_v1_p00030_c003",
+        "nursing_handbook_v1_p00030_c001",
+        "nursing_handbook_v1_p00029_c002",
+        "nursing_handbook_v1_p00027_c001",
+        "nursing_handbook_v1_p00030_c002"
+      ],
+      "answer": "To evaluate if interventions have been effective, the nurse continually assesses the client by comparing their current status against baseline data and mutual goals/outcomes, asking whether the care is moving toward the goal [nursing_handbook_v1_p00030_c003, nursing_handbook_v1_p00030_c002]. When desired outcomes are not met, the nurse must begin again with assessment, determine the reasons why the outcomes were unmet (using the SMART acronym to evaluate specificity, measurability, attainability, realism, and time), check whether the correct nursing diagnosis was identified, adjust the care plan as needed, and collaborate with the client, caregiver, and family to decide if additional interventions are necessary [nursing_handbook_v1_p00030_c003].\n\nKey nursing points:\nThe evaluation phase functions as another nursing assessment where the nurse observes client responses against baseline data [nursing_handbook_v1_p00030_c003, nursing_handbook_v1_p00030_c002]. If outcomes are unachieved, re-evaluating via assessment, checking diagnosis accuracy, and revising goals and interventions collaboratively ensures the nursing process continues dynamically [nursing_handbook_v1_p00030_c003].",
+      "sources": [
+        "nursing_handbook_v1_p00030_c003",
+        "nursing_handbook_v1_p00030_c002"
+      ],
+      "metrics": {
+        "rouge1_f1": 0.3474,
+        "rouge2_f1": 0.1383,
+        "rougeL_f1": 0.2526,
+        "bleu1": 0.2276,
+        "bleu2": 0.1433,
+        "bleu4": 0.0671,
+        "citation_precision": 1.0,
+        "citation_coverage": 0.0,
+        "faithfulness": 1.0,
+        "relevance": 0.7273
+      }
+    },
+    {
+      "query_id": "eval30_12",
+      "question": "What is the difference between independent and collaborative nursing interventions?",
+      "gold_intent": "comparison",
+      "gold_chunk_ids": [
+        "nursing_handbook_v1_p00027_c002",
+        "nursing_handbook_v1_p00030_c001",
+        "nursing_handbook_v1_p00034_c001"
+      ],
+      "retrieved_chunk_ids": [
+        "nursing_handbook_v1_p00027_c002",
+        "nursing_handbook_v1_p00030_c001",
+        "nursing_handbook_v1_p00026_c001",
+        "nursing_handbook_v1_p00034_c001",
+        "nursing_handbook_v1_p00027_c001"
+      ],
+      "answer": "Independent nursing interventions are autonomous actions initiated by the nurse in response to a nursing diagnosis, whereas collaborative interventions are actions performed by the nurse in collaboration with other health care professionals that may require a health care provider's order and may respond to both medical and nursing diagnoses.\n\nKey nursing points:\nIndependent interventions are nurse-initiated autonomous actions based on a nursing diagnosis. Collaborative interventions involve working together with other health care professionals and may require a provider's order.",
+      "sources": [
+        "nursing_handbook_v1_p00030_c001"
+      ],
+      "metrics": {
+        "rouge1_f1": 0.2946,
+        "rouge2_f1": 0.1417,
+        "rougeL_f1": 0.2326,
+        "bleu1": 0.2317,
+        "bleu2": 0.1605,
+        "bleu4": 0.0884,
+        "citation_precision": 1.0,
+        "citation_coverage": 0.3333,
+        "faithfulness": 1.0,
+        "relevance": 0.6
+      }
+    },
+    {
+      "query_id": "eval30_13",
+      "question": "Why is documentation important during the nursing process, and what information should the nurse document?",
+      "gold_intent": "documentation",
+      "gold_chunk_ids": [
+        "nursing_handbook_v1_p00024_c002",
+        "nursing_handbook_v1_p00030_c002",
+        "nursing_handbook_v1_p00030_c003"
+      ],
+      "retrieved_chunk_ids": [
+        "nursing_handbook_v1_p00031_c001",
+        "nursing_handbook_v1_p00035_c001",
+        "nursing_handbook_v1_p00030_c003",
+        "nursing_handbook_v1_p00030_c001",
+        "nursing_handbook_v1_p00030_c002"
+      ],
+      "answer": "Documentation is necessary for ensuring continuity of care, meeting legal requirements, and recording the care plan, nursing activities performed, and intervention results.\n\nKey nursing points:\nThe nurse must document prioritized nursing diagnostic statements, outcomes, and interventions to ensure continuity of care with all health care personnel [nursing_handbook_v1_p00030_c002]. Documentation is also necessary for legal reasons because in a legal dispute, unrecorded care is considered undone [nursing_handbook_v1_p00031_c001]. Nurses record specific nursing activities performed, the results of those nursing interventions, and client outcomes [nursing_handbook_v1_p00031_c001, nursing_handbook_v1_p00030_c003].",
+      "sources": [
+        "nursing_handbook_v1_p00031_c001",
+        "nursing_handbook_v1_p00030_c002",
+        "nursing_handbook_v1_p00030_c003"
+      ],
+      "metrics": {
+        "rouge1_f1": 0.3833,
+        "rouge2_f1": 0.1525,
+        "rougeL_f1": 0.2333,
+        "bleu1": 0.2805,
+        "bleu2": 0.1765,
+        "bleu4": 0.0,
+        "citation_precision": 1.0,
+        "citation_coverage": 1.0,
+        "faithfulness": 1.0,
+        "relevance": 0.5
+      }
+    },
+    {
+      "query_id": "eval30_14",
+      "question": "How does evidence-based nursing influence the selection of nursing interventions?",
+      "gold_intent": "ebp",
+      "gold_chunk_ids": [
+        "nursing_handbook_v1_p00034_c001",
+        "nursing_handbook_v1_p00034_c002",
+        "nursing_handbook_v1_p00035_c001"
+      ],
+      "retrieved_chunk_ids": [
+        "nursing_handbook_v1_p00032_c001",
+        "nursing_handbook_v1_p00029_c002",
+        "nursing_handbook_v1_p00030_c001",
+        "nursing_handbook_v1_p00022_c001",
+        "nursing_handbook_v1_p00034_c002"
+      ],
+      "answer": "Evidence-based nursing helps nurses select appropriate priority interventions based on current best evidence to affect client outcomes, and provides scientific rationales for nursing treatments.\n\nKey nursing points:\nNurses identify complex client problems that require critical thinking to choose priority interventions based on current best evidence [nursing_handbook_v1_p00032_c001]. Furthermore, evidence-based rationales and research are integrated to support individual actions and treatments implemented in care [nursing_handbook_v1_p00034_c002].",
+      "sources": [
+        "nursing_handbook_v1_p00032_c001",
+        "nursing_handbook_v1_p00034_c002"
+      ],
+      "metrics": {
+        "rouge1_f1": 0.2626,
+        "rouge2_f1": 0.0412,
+        "rougeL_f1": 0.1818,
+        "bleu1": 0.2,
+        "bleu2": 0.0791,
+        "bleu4": 0.0,
+        "citation_precision": 1.0,
+        "citation_coverage": 1.0,
+        "faithfulness": 1.0,
+        "relevance": 0.4
+      }
+    },
+    {
+      "query_id": "eval30_15",
+      "question": "How does person-centered care influence nursing assessment, goal setting, and intervention planning?",
+      "gold_intent": "person_centered_care",
+      "gold_chunk_ids": [
+        "nursing_handbook_v1_p00023_c001",
+        "nursing_handbook_v1_p00033_c001"
+      ],
+      "retrieved_chunk_ids": [
+        "nursing_handbook_v1_p00032_c001",
+        "nursing_handbook_v1_p00022_c001",
+        "nursing_handbook_v1_p00030_c003",
+        "nursing_handbook_v1_p00028_c002",
+        "nursing_handbook_v1_p00033_c001"
+      ],
+      "answer": "Person-centered care influences the nursing process by treating the patient or designee as a full partner in assessment, diagnosis selection, outcomes, interventions, and evaluation based on respect for their preferences, values, and needs.\n\nKey nursing points:\nPerson-centered care requires the nurse to learn as much as possible about the client, including their 'patient's story,' and engage the client and family as full partners throughout the assessment, nursing diagnosis selection, outcomes, interventions, and evaluation. Furthermore, planning is influenced by cultural awareness and assessments, integrating client values, beliefs, and preferences linked to their culture.",
+      "sources": [
+        "nursing_handbook_v1_p00032_c001",
+        "nursing_handbook_v1_p00033_c001"
+      ],
+      "metrics": {
+        "rouge1_f1": 0.3459,
+        "rouge2_f1": 0.1374,
+        "rougeL_f1": 0.2256,
+        "bleu1": 0.2421,
+        "bleu2": 0.1523,
+        "bleu4": 0.0798,
+        "citation_precision": 1.0,
+        "citation_coverage": 1.0,
+        "faithfulness": 1.0,
+        "relevance": 0.5385
+      }
+    },
+    {
+      "query_id": "eval30_16",
+      "question": "What nursing diagnoses should be considered for a client with abdominal distention, and what related factors support them?",
+      "gold_intent": "diagnosis",
+      "gold_chunk_ids": [
+        "nursing_handbook_v1_p00039_c001"
+      ],
+      "retrieved_chunk_ids": [
+        "nursing_handbook_v1_p00024_c002",
+        "nursing_handbook_v1_p00030_c001",
+        "nursing_handbook_v1_p00027_c001",
+        "nursing_handbook_v1_p00039_c001",
+        "nursing_handbook_v1_p00023_c001"
+      ],
+      "answer": "For a client with abdominal distention, the suggested nursing diagnoses and their supporting related factors include: Risk for Bleeding (risk factors: trauma and possible contusion/rupture of abdominal organs), Risk for Infection (risk factor: possible perforation of abdominal structures), Fear related to invasive procedure (for Radiofrequency Catheter Ablation), Risk for Decreased Cardiac Tissue Perfusion (risk factor: catheterization of heart), Chronic Functional Constipation (related to habitually suppresses urge to defecate, impaired physical mobility, inadequate dietary intake, insufficient fiber intake, insufficient fluid intake), Constipation (related to decreased activity, decreased fluid intake, decreased fiber intake, pathological process), Dysfunctional Gastrointestinal Motility (related to decreased perfusion of intestines, medication effect), Nausea (related to irritation of gastrointestinal tract), Imbalanced Nutrition: Less Than Body Requirements (related to nausea, vomiting), Acute Pain (related to retention of air, gastrointestinal secretions), and Delayed Surgical Recovery (related to retention of gas, secretions).\n\nKey nursing points:\nSection II of the nursing evidence lists specific client conditions such as Abdominal Distention alongside associated NANDA-I approved nursing diagnoses and their specific related factors or risk factors.",
+      "sources": [
+        "nursing_handbook_v1_p00039_c001"
+      ],
+      "metrics": {
+        "rouge1_f1": 0.3486,
+        "rouge2_f1": 0.2037,
+        "rougeL_f1": 0.2477,
+        "bleu1": 0.2197,
+        "bleu2": 0.1676,
+        "bleu4": 0.0854,
+        "citation_precision": 1.0,
+        "citation_coverage": 1.0,
+        "faithfulness": 1.0,
+        "relevance": 0.6471
+      }
+    },
+    {
+      "query_id": "eval30_17",
+      "question": "A client has abdominal pain and decreased bowel activity. What nursing diagnoses could be considered, and what factors may contribute to them?",
+      "gold_intent": "clinical_reasoning",
+      "gold_chunk_ids": [
+        "nursing_handbook_v1_p00039_c001"
+      ],
+      "retrieved_chunk_ids": [
+        "nursing_handbook_v1_p00027_c001",
+        "nursing_handbook_v1_p00024_c002",
+        "nursing_handbook_v1_p00027_c002",
+        "nursing_handbook_v1_p00030_c001",
+        "nursing_handbook_v1_p00039_c001"
+      ],
+      "answer": "For a client with abdominal pain, nursing diagnoses that could be considered include Dysfunctional Gastrointestinal Motility related to decreased perfusion or medication effect, and Acute Pain related to injury or a pathological process [nursing_handbook_v1_p00039_c001].\n\nKey nursing points:\nBased on the evidence for abdominal pain, potential nursing diagnoses and their contributing factors (etiologies) are: Dysfunctional Gastrointestinal Motility related to decreased perfusion or medication effect, and Acute Pain related to injury or a pathological process [nursing_handbook_v1_p00039_c001].",
+      "sources": [
+        "nursing_handbook_v1_p00039_c001"
+      ],
+      "metrics": {
+        "rouge1_f1": 0.4074,
+        "rouge2_f1": 0.1698,
+        "rougeL_f1": 0.3519,
+        "bleu1": 0.2973,
+        "bleu2": 0.1914,
+        "bleu4": 0.092,
+        "citation_precision": 1.0,
+        "citation_coverage": 1.0,
+        "faithfulness": 1.0,
+        "relevance": 0.65
+      }
+    },
+    {
+      "query_id": "eval30_18",
+      "question": "What nursing diagnoses are associated with achalasia, and what factors increase the client's risk for aspiration?",
+      "gold_intent": "diagnosis_risk",
+      "gold_chunk_ids": [
+        "nursing_handbook_v1_p00040_c001"
+      ],
+      "retrieved_chunk_ids": [
+        "nursing_handbook_v1_p00040_c001",
+        "nursing_handbook_v1_p00029_c002",
+        "nursing_handbook_v1_p00026_c001",
+        "nursing_handbook_v1_p00027_c001",
+        "nursing_handbook_v1_p00028_c001"
+      ],
+      "answer": "For clients with achalasia, the associated nursing diagnoses are Ineffective Coping r/t chronic disease, Acute Pain r/t stasis of food in esophagus, and Impaired Swallowing r/t neuromuscular impairment [nursing_handbook_v1_p00040_c001]. The identified risk factor that increases the client's risk for aspiration is nocturnal regurgitation [nursing_handbook_v1_p00040_c001].\n\nKey nursing points:\nThe nursing handbook outlines specific nursing diagnoses related to achalasia, which include Ineffective Coping, Acute Pain due to the stasis of food in the esophagus, and Impaired Swallowing due to neuromuscular impairment [nursing_handbook_v1_p00040_c001]. Additionally, nocturnal regurgitation is listed as a risk factor for the risk for aspiration nursing diagnosis in achalasia [nursing_handbook_v1_p00040_c001].",
+      "sources": [
+        "nursing_handbook_v1_p00040_c001"
+      ],
+      "metrics": {
+        "rouge1_f1": 0.5035,
+        "rouge2_f1": 0.3404,
+        "rougeL_f1": 0.3357,
+        "bleu1": 0.3495,
+        "bleu2": 0.2868,
+        "bleu4": 0.1988,
+        "citation_precision": 1.0,
+        "citation_coverage": 1.0,
+        "faithfulness": 1.0,
+        "relevance": 0.8125
+      }
+    },
+    {
+      "query_id": "eval30_19",
+      "question": "What nursing concerns should be considered for a client experiencing metabolic acidosis?",
+      "gold_intent": "assessment_diagnosis",
+      "gold_chunk_ids": [
+        "nursing_handbook_v1_p00040_c001"
+      ],
+      "retrieved_chunk_ids": [
+        "nursing_handbook_v1_p00040_c001",
+        "nursing_handbook_v1_p00024_c002",
+        "nursing_handbook_v1_p00034_c002",
+        "nursing_handbook_v1_p00025_c002",
+        "nursing_handbook_v1_p00027_c001"
+      ],
+      "answer": "For a client experiencing metabolic acidosis, nursing concerns include acute confusion, impaired memory, imbalanced nutrition less than body requirements, risk for electrolyte imbalance, risk for injury, risk for decreased cardiac tissue perfusion, and risk for shock.\n\nKey nursing points:\nThe text lists specific nursing diagnoses and concerns associated with metabolic acidosis, including acute confusion related to acid-base and associated electrolyte imbalances, impaired memory from brain function effects, imbalanced nutrition, risk for electrolyte imbalance, risk for injury from disorientation, weakness, or stupor, risk for decreased cardiac tissue perfusion from hyperkalemic dysrhythmias, and risk for shock due to an abnormal metabolic and acid state impairing function and tissue perfusion.",
+      "sources": [
+        "nursing_handbook_v1_p00040_c001"
+      ],
+      "metrics": {
+        "rouge1_f1": 0.4868,
+        "rouge2_f1": 0.32,
+        "rougeL_f1": 0.4474,
+        "bleu1": 0.3426,
+        "bleu2": 0.2772,
+        "bleu4": 0.1717,
+        "citation_precision": 1.0,
+        "citation_coverage": 1.0,
+        "faithfulness": 1.0,
+        "relevance": 0.6667
+      }
+    },
+    {
+      "query_id": "eval30_20",
+      "question": "What nursing diagnoses may result from respiratory acidosis, and how can impaired gas exchange affect the client?",
+      "gold_intent": "diagnosis",
+      "gold_chunk_ids": [
+        "nursing_handbook_v1_p00040_c001"
+      ],
+      "retrieved_chunk_ids": [
+        "nursing_handbook_v1_p00040_c001",
+        "nursing_handbook_v1_p00049_c001",
+        "nursing_handbook_v1_p00027_c001",
+        "nursing_handbook_v1_p00050_c001",
+        "nursing_handbook_v1_p00029_c002"
+      ],
+      "answer": "The evidence is insufficient to answer how impaired gas exchange affects a client with respiratory acidosis.\n\nKey nursing points:\nWhile the evidence lists nursing diagnoses for Respiratory Acidosis (Decreased Activity Tolerance, Impaired Gas Exchange r/t ventilation-perfusion imbalance, and Impaired Memory r/t hypoxia), and mentions that Impaired Gas Exchange can be related to a ventilation-perfusion imbalance, it does not explicitly state how impaired gas exchange affects the client in the context of respiratory acidosis [nursing_handbook_v1_p00040_c001].",
+      "sources": [
+        "nursing_handbook_v1_p00040_c001"
+      ],
+      "metrics": {
+        "rouge1_f1": 0.4174,
+        "rouge2_f1": 0.2655,
+        "rougeL_f1": 0.2957,
+        "bleu1": 0.3077,
+        "bleu2": 0.2448,
+        "bleu4": 0.1744,
+        "citation_precision": 1.0,
+        "citation_coverage": 1.0,
+        "faithfulness": 1.0,
+        "relevance": 0.7059
+      }
+    },
+    {
+      "query_id": "eval30_21",
+      "question": "What nursing diagnoses should be considered for a client with asthma, particularly regarding airway clearance, breathing, activity tolerance, and anxiety?",
+      "gold_intent": "diagnosis",
+      "gold_chunk_ids": [
+        "nursing_handbook_v1_p00040_c001",
+        "nursing_handbook_v1_p00049_c001"
+      ],
+      "retrieved_chunk_ids": [
+        "nursing_handbook_v1_p00028_c002",
+        "nursing_handbook_v1_p00049_c001",
+        "nursing_handbook_v1_p00024_c002",
+        "nursing_handbook_v1_p00026_c003",
+        "nursing_handbook_v1_p00029_c001"
+      ],
+      "answer": "For a client with asthma, the nursing diagnoses that should be considered include Decreased Activity Tolerance, Ineffective Airway Clearance, Anxiety, Disturbed Body Image, Ineffective Breathing Pattern, Ineffective Coping, and Ineffective Home Maintenance Behaviors.\n\nKey nursing points:\nAccording to the provided evidence, the nursing diagnoses listed specifically for Asthma are Decreased Activity Tolerance (r/t fatigue, energy shift to meet muscle needs for breathing to overcome airway obstruction), Ineffective Airway Clearance (r/t tracheobronchial narrowing, excessive secretions), Anxiety (r/t inability to breathe effectively, fear of suffocation), Disturbed Body Image (r/t decreased participation in physical activities), Ineffective Breathing Pattern (r/t anxiety), Ineffective Coping (r/t personal vulnerability to situational crisis), and Ineffective Home Maintenance Behaviors (r/t deficient knowledge regarding control of environmental triggers).",
+      "sources": [
+        "nursing_handbook_v1_p00049_c001"
+      ],
+      "metrics": {
+        "rouge1_f1": 0.293,
+        "rouge2_f1": 0.1677,
+        "rougeL_f1": 0.2548,
+        "bleu1": 0.184,
+        "bleu2": 0.1389,
+        "bleu4": 0.0627,
+        "citation_precision": 1.0,
+        "citation_coverage": 1.0,
+        "faithfulness": 1.0,
+        "relevance": 0.9
+      }
+    },
+    {
+      "query_id": "eval30_22",
+      "question": "What nursing diagnoses are associated with agoraphobia, and how can inadequate support systems affect the client's coping?",
+      "gold_intent": "diagnosis",
+      "gold_chunk_ids": [
+        "nursing_handbook_v1_p00043_c001"
+      ],
+      "retrieved_chunk_ids": [
+        "nursing_handbook_v1_p00043_c001",
+        "nursing_handbook_v1_p00027_c001",
+        "nursing_handbook_v1_p00029_c002",
+        "nursing_handbook_v1_p00032_c001",
+        "nursing_handbook_v1_p00035_c001"
+      ],
+      "answer": "Agoraphobia is associated with the nursing diagnoses of Anxiety related to (r/t) real or perceived threat to physical integrity, Ineffective Coping related to (r/t) inadequate support systems, and Fear related to (r/t) leaving home or going out in public places [nursing_handbook_v1_p00043_c001]. Regarding coping, an inadequate support system acts as a related factor that contributes to ineffective coping in clients with agoraphobia [nursing_handbook_v1_p00043_c001].\n\nKey nursing points:\nAccording to the provided nursing handbook text, agoraphobia is specifically listed alongside related factors (etiology) indicating that clients may experience anxiety related to a real or perceived threat to physical integrity, ineffective coping related to inadequate support systems, and fear related to leaving home or going out in public places [nursing_handbook_v1_p00043_c001].",
+      "sources": [
+        "nursing_handbook_v1_p00043_c001"
+      ],
+      "metrics": {
+        "rouge1_f1": 0.2222,
+        "rouge2_f1": 0.0845,
+        "rougeL_f1": 0.1667,
+        "bleu1": 0.1345,
+        "bleu2": 0.0827,
+        "bleu4": 0.0,
+        "citation_precision": 1.0,
+        "citation_coverage": 1.0,
+        "faithfulness": 1.0,
+        "relevance": 0.6111
+      }
+    },
+    {
+      "query_id": "eval30_23",
+      "question": "What nursing priorities should be considered for a client with agranulocytosis, particularly regarding infection and surgical recovery?",
+      "gold_intent": "risk_prioritization",
+      "gold_chunk_ids": [
+        "nursing_handbook_v1_p00043_c001"
+      ],
+      "retrieved_chunk_ids": [
+        "nursing_handbook_v1_p00024_c002",
+        "nursing_handbook_v1_p00029_c002",
+        "nursing_handbook_v1_p00043_c001",
+        "nursing_handbook_v1_p00048_c001",
+        "nursing_handbook_v1_p00023_c002"
+      ],
+      "answer": "For a client with agranulocytosis, nursing priorities include addressing delayed surgical recovery related to an abnormal blood profile and managing the risk for infection due to an abnormal blood profile.\n\nKey nursing points:\nAccording to the evidence, agranulocytosis is associated with the nursing diagnoses of delayed surgical recovery related to an abnormal blood profile and risk for infection with the risk factor of an abnormal blood profile.",
+      "sources": [
+        "nursing_handbook_v1_p00043_c001"
+      ],
+      "metrics": {
+        "rouge1_f1": 0.3441,
+        "rouge2_f1": 0.1978,
+        "rougeL_f1": 0.2151,
+        "bleu1": 0.2388,
+        "bleu2": 0.1805,
+        "bleu4": 0.0941,
+        "citation_precision": 1.0,
+        "citation_coverage": 1.0,
+        "faithfulness": 1.0,
+        "relevance": 0.6471
+      }
+    },
+    {
+      "query_id": "eval30_24",
+      "question": "What nursing diagnoses and risk factors should be considered when caring for an older adult experiencing age-related changes?",
+      "gold_intent": "assessment_risk",
+      "gold_chunk_ids": [
+        "nursing_handbook_v1_p00035_c001",
+        "nursing_handbook_v1_p00040_c001",
+        "nursing_handbook_v1_p00043_c001",
+        "nursing_handbook_v1_p00045_c001",
+        "nursing_handbook_v1_p00051_c001"
+      ],
+      "retrieved_chunk_ids": [
+        "nursing_handbook_v1_p00024_c002",
+        "nursing_handbook_v1_p00033_c001",
+        "nursing_handbook_v1_p00027_c001",
+        "nursing_handbook_v1_p00025_c002",
+        "nursing_handbook_v1_p00026_c001"
+      ],
+      "answer": "The provided evidence is insufficient to answer what nursing diagnoses and risk factors should be considered when caring specifically for older adults experiencing age-related changes.\n\nKey nursing points:\nThe text discusses general nursing assessments, nursing diagnoses (problem-focused, risk, and health promotion), and specific case studies like a 73-year-old male with COPD, but it does not provide information addressing nursing diagnoses and risk factors specifically for older adults experiencing age-related changes.",
+      "sources": [],
+      "metrics": {
+        "rouge1_f1": 0.2385,
+        "rouge2_f1": 0.0748,
+        "rougeL_f1": 0.1835,
+        "bleu1": 0.1733,
+        "bleu2": 0.0968,
+        "bleu4": 0.0,
+        "citation_precision": 1.0,
+        "citation_coverage": 0.0,
+        "faithfulness": 1.0,
+        "relevance": 0.8947
+      }
+    },
+    {
+      "query_id": "eval30_25",
+      "question": "What nursing diagnoses may be appropriate for a client experiencing anxiety related to a medical procedure or threat to health?",
+      "gold_intent": "diagnosis",
+      "gold_chunk_ids": [
+        "nursing_handbook_v1_p00039_c001",
+        "nursing_handbook_v1_p00040_c001",
+        "nursing_handbook_v1_p00043_c001",
+        "nursing_handbook_v1_p00044_c001"
+      ],
+      "retrieved_chunk_ids": [
+        "nursing_handbook_v1_p00027_c001",
+        "nursing_handbook_v1_p00025_c002",
+        "nursing_handbook_v1_p00030_c001",
+        "nursing_handbook_v1_p00027_c002",
+        "nursing_handbook_v1_p00028_c002"
+      ],
+      "answer": "The provided evidence is insufficient to determine what nursing diagnoses are appropriate specifically for a client experiencing anxiety related to a medical procedure or threat to health.\n\nKey nursing points:\nThe evidence discusses nursing diagnoses such as Decreased Activity Tolerance for COPD, Deficient Knowledge, Disturbed Sleep Pattern related to anxiety and stressors, and Ineffective Airway Clearance related to asthma, but it does not state which diagnoses are appropriate for anxiety specifically related to a medical procedure or threat to health.",
+      "sources": [],
+      "metrics": {
+        "rouge1_f1": 0.2018,
+        "rouge2_f1": 0.0187,
+        "rougeL_f1": 0.1468,
+        "bleu1": 0.1375,
+        "bleu2": 0.0417,
+        "bleu4": 0.0,
+        "citation_precision": 1.0,
+        "citation_coverage": 0.0,
+        "faithfulness": 1.0,
+        "relevance": 0.8889
+      }
+    },
+    {
+      "query_id": "eval30_26",
+      "question": "What nursing diagnoses should be considered for a client with anemia, and how can reduced oxygen supply affect the client's functioning?",
+      "gold_intent": "diagnosis_pathophysiology",
+      "gold_chunk_ids": [
+        "nursing_handbook_v1_p00046_c001",
+        "nursing_handbook_v1_p00048_c001"
+      ],
+      "retrieved_chunk_ids": [
+        "nursing_handbook_v1_p00027_c001",
+        "nursing_handbook_v1_p00024_c002",
+        "nursing_handbook_v1_p00028_c001",
+        "nursing_handbook_v1_p00046_c001",
+        "nursing_handbook_v1_p00027_c002"
+      ],
+      "answer": "For a client with anemia, nursing diagnoses to consider include Anxiety r/t cause of disease, Impaired Comfort r/t feelings of always being cold from decreased hemoglobin and decreased metabolism, Fatigue r/t decreased oxygen supply to the body and increased cardiac workload, Impaired Memory r/t change in cognition from decreased oxygen supply to the body, Delayed Surgical Recovery r/t decreased oxygen supply to the body and increased cardiac workload, Risk for Bleeding, Risk for Injury, and Readiness for Enhanced Knowledge [chunk_id: nursing_handbook_v1_p00046_c001]. Reduced oxygen supply can cause fatigue, increased cardiac workload, impaired memory or changes in cognition, and delayed surgical recovery [chunk_id: nursing_handbook_v1_p00046_c001].\n\nKey nursing points:\nThe evidence outlines specific nursing diagnoses associated with anemia, linking decreased oxygen supply to physiological and cognitive impacts such as fatigue, increased cardiac workload, impaired memory, and delayed surgical recovery [chunk_id: nursing_handbook_v1_p00046_c001].",
+      "sources": [
+        "nursing_handbook_v1_p00046_c001"
+      ],
+      "metrics": {
+        "rouge1_f1": 0.2118,
+        "rouge2_f1": 0.0357,
+        "rougeL_f1": 0.1647,
+        "bleu1": 0.1268,
+        "bleu2": 0.0519,
+        "bleu4": 0.0,
+        "citation_precision": 1.0,
+        "citation_coverage": 1.0,
+        "faithfulness": 1.0,
+        "relevance": 0.619
+      }
+    },
+    {
+      "query_id": "eval30_27",
+      "question": "What nursing diagnoses may be associated with anaphylactic shock, and which problems require immediate nursing attention?",
+      "gold_intent": "prioritization_emergency",
+      "gold_chunk_ids": [
+        "nursing_handbook_v1_p00046_c001"
+      ],
+      "retrieved_chunk_ids": [
+        "nursing_handbook_v1_p00028_c002",
+        "nursing_handbook_v1_p00046_c001",
+        "nursing_handbook_v1_p00038_c001",
+        "nursing_handbook_v1_p00030_c001",
+        "nursing_handbook_v1_p00025_c002"
+      ],
+      "answer": "Nursing diagnoses associated with anaphylactic shock include Deficient Fluid Volume related to compromised regulatory mechanism, Ineffective Airway Clearance related to laryngeal edema and bronchospasm, Risk for Latex Allergic Reaction related to abnormal immune mechanism response, and Impaired Spontaneous Ventilation related to acute airway obstruction from the anaphylaxis process [nursing_handbook_v1_p00046_c001]. Problems that require immediate nursing attention are prioritized based on urgent needs, safety, and the ABC (airway, breathing, and circulation) method to rank threats to a client's immediate survival or life-threatening problems [nursing_handbook_v1_p00028_c002, nursing_handbook_v1_p00046_c001].\n\nKey nursing points:\nAccording to the evidence, anaphylactic shock has specific associated nursing diagnoses which encompass fluid and respiratory concerns [nursing_handbook_v1_p0002. Furthermore, nursing diagnoses and urgent client needs are prioritized using airway, breathing, and circulation (ABC) and safety to address immediate life-threatening problems first [nursing_handbook_v1_p00028_c002].",
+      "sources": [
+        "nursing_handbook_v1_p00028_c002",
+        "nursing_handbook_v1_p00046_c001"
+      ],
+      "metrics": {
+        "rouge1_f1": 0.2138,
+        "rouge2_f1": 0.0637,
+        "rougeL_f1": 0.1635,
+        "bleu1": 0.1298,
+        "bleu2": 0.0706,
+        "bleu4": 0.0,
+        "citation_precision": 1.0,
+        "citation_coverage": 1.0,
+        "faithfulness": 1.0,
+        "relevance": 0.8
+      }
+    },
+    {
+      "query_id": "eval30_28",
+      "question": "What nursing diagnoses should be considered for a client with ARDS, particularly concerning airway clearance, gas exchange, and ventilation?",
+      "gold_intent": "diagnosis",
+      "gold_chunk_ids": [
+        "nursing_handbook_v1_p00041_c001",
+        "nursing_handbook_v1_p00049_c001"
+      ],
+      "retrieved_chunk_ids": [
+        "nursing_handbook_v1_p00049_c001",
+        "nursing_handbook_v1_p00040_c001",
+        "nursing_handbook_v1_p00024_c002",
+        "nursing_handbook_v1_p00029_c001",
+        "nursing_handbook_v1_p00025_c002"
+      ],
+      "answer": "For a client with ARDS (Acute Respiratory Distress Syndrome), the nursing diagnoses to consider regarding airway clearance, gas exchange, and ventilation include Ineffective Airway Clearance, Impaired Gas Exchange, and Impaired Spontaneous Ventilation.\n\nKey nursing points:\nAccording to the evidence, ARDS is associated with specific nursing diagnoses: Ineffective Airway Clearance related to excessive tracheobronchial secretions, Impaired Gas Exchange related to damage to the alveolar-capillary membrane and changes in lung compliance, and Impaired Spontaneous Ventilation related to damage to the alveolar-capillary membrane.",
+      "sources": [
+        "nursing_handbook_v1_p00049_c001"
+      ],
+      "metrics": {
+        "rouge1_f1": 0.3604,
+        "rouge2_f1": 0.1468,
+        "rougeL_f1": 0.2703,
+        "bleu1": 0.2439,
+        "bleu2": 0.1552,
+        "bleu4": 0.0,
+        "citation_precision": 1.0,
+        "citation_coverage": 1.0,
+        "faithfulness": 1.0,
+        "relevance": 0.6842
+      }
+    },
+    {
+      "query_id": "eval30_29",
+      "question": "What nursing diagnoses and risk factors should be considered for a client with arthritis experiencing pain, weakness, and impaired mobility?",
+      "gold_intent": "diagnosis",
+      "gold_chunk_ids": [
+        "nursing_handbook_v1_p00049_c001"
+      ],
+      "retrieved_chunk_ids": [
+        "nursing_handbook_v1_p00024_c002",
+        "nursing_handbook_v1_p00041_c001",
+        "nursing_handbook_v1_p00049_c001",
+        "nursing_handbook_v1_p00025_c001",
+        "nursing_handbook_v1_p00045_c001"
+      ],
+      "answer": "For a client with arthritis, the relevant nursing diagnoses and related factors include decreased activity tolerance related to chronic pain, fatigue, and weakness; disturbed body image related to ineffective coping with joint abnormalities; impaired physical mobility related to joint impairment; chronic pain related to the progression of joint deterioration; self-care deficit related to pain with movement and damage to joints; and readiness for enhanced knowledge.\n\nKey nursing points:\nThe evidence outlines specific nursing diagnoses and related factors for arthritis, including decreased activity tolerance, disturbed body image, impaired physical mobility, chronic pain, self-care deficits associated with movement pain and joint damage, and readiness for enhanced knowledge [nursing_handbook_v1_p00049_c001].",
+      "sources": [
+        "nursing_handbook_v1_p00049_c001"
+      ],
+      "metrics": {
+        "rouge1_f1": 0.25,
+        "rouge2_f1": 0.0746,
+        "rougeL_f1": 0.2206,
+        "bleu1": 0.1574,
+        "bleu2": 0.0858,
+        "bleu4": 0.0,
+        "citation_precision": 1.0,
+        "citation_coverage": 1.0,
+        "faithfulness": 1.0,
+        "relevance": 0.6842
+      }
+    },
+    {
+      "query_id": "eval30_30",
+      "question": "A client with a spinal cord injury develops autonomic dysreflexia. What are the likely triggers, what complications can occur, and what immediate nursing actions should be taken?",
+      "gold_intent": "emergency_clinical_reasoning",
+      "gold_chunk_ids": [
+        "nursing_handbook_v1_p00050_c001"
+      ],
+      "retrieved_chunk_ids": [
+        "nursing_handbook_v1_p00028_c002",
+        "nursing_handbook_v1_p00050_c001",
+        "nursing_handbook_v1_p00025_c001",
+        "nursing_handbook_v1_p00030_c001",
+        "nursing_handbook_v1_p00029_c002"
+      ],
+      "answer": "The provided evidence is insufficient to answer the question about the likely triggers, complications, and immediate nursing actions specifically for autonomic dysreflexia resulting from a spinal cord injury, as the text only lists bladder distention, bowel distention, and noxious stimuli as related factors or risk factors without detailing complications or specific immediate nursing actions for this condition.\n\nKey nursing points:\nThe text mentions autonomic dysreflexia and its related/risk factors (bladder distention, bowel distention, noxious stimuli), but does not provide information regarding specific complications or immediate nursing actions to take for a client with a spinal cord injury developing autonomic dysreflexia [nursing_handbook_v1_p00050_c001].",
+      "sources": [
+        "nursing_handbook_v1_p00050_c001"
+      ],
+      "metrics": {
+        "rouge1_f1": 0.3179,
+        "rouge2_f1": 0.0537,
+        "rougeL_f1": 0.1854,
+        "bleu1": 0.2353,
+        "bleu2": 0.0965,
+        "bleu4": 0.0,
+        "citation_precision": 1.0,
+        "citation_coverage": 1.0,
+        "faithfulness": 1.0,
+        "relevance": 0.6667
+      }
+    }
+  ]
+}
