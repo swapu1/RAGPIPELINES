@@ -27,7 +27,7 @@ import pandas as pd
 import streamlit as st
 
 # Setup paths
-BASE_DIR = Path(r"c:\Users\swapn\nursing_pipeline")
+BASE_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(BASE_DIR))
 
 from app_engine import PipelineEngine, PIPELINES
