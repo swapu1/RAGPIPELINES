@@ -94,8 +94,11 @@ PIPELINES = {
 class PipelineEngine:
     _instance: Optional["PipelineEngine"] = None
 
-    def __init__(self, base_dir: str = r"c:\Users\swapn\nursing_pipeline"):
-        self.base_dir = Path(base_dir)
+    def __init__(self, base_dir: Optional[str] = None):
+        if base_dir is None:
+            self.base_dir = Path(__file__).resolve().parent
+        else:
+            self.base_dir = Path(base_dir)
         logger.info("Initializing Pipeline Engine from %s...", self.base_dir)
         t0 = time.time()
 
@@ -130,11 +133,17 @@ class PipelineEngine:
 
         # 5. Load Concept Tagging Index & Ontology Store
         concept_salient_path = self.base_dir / "chunk_concepts_salient.json"
-        self.concept_index = ConceptIndex.from_path(str(concept_salient_path))
+        if concept_salient_path.exists():
+            self.concept_index = ConceptIndex.from_path(str(concept_salient_path))
+        else:
+            self.concept_index = None
 
         ontology_path = self.base_dir / "ontology_store.pkl"
-        with open(ontology_path, "rb") as f:
-            self.ontology_store = pickle.load(f)
+        if ontology_path.exists():
+            with open(ontology_path, "rb") as f:
+                self.ontology_store = pickle.load(f)
+        else:
+            self.ontology_store = None
 
         # 6. Load Phase 9 Augmented Assets
         aug_json_path = self.base_dir / "chunks_augmented.json"
@@ -152,8 +161,11 @@ class PipelineEngine:
         self.aug_faiss = faiss.read_index(str(aug_faiss_path))
 
         aug_meta_path = self.base_dir / "index_augmented_metadata.json"
-        with open(aug_meta_path, "r", encoding="utf-8") as f:
-            self.aug_metadata = json.load(f)["entries"]
+        if aug_meta_path.exists():
+            with open(aug_meta_path, "r", encoding="utf-8") as f:
+                self.aug_metadata = json.load(f).get("entries", [])
+        else:
+            self.aug_metadata = []
 
         self.abstract_db_path = str(self.base_dir / "context_chunks_abstract.db")
 
