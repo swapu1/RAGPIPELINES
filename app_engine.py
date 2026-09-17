@@ -181,6 +181,9 @@ class PipelineEngine:
     # Fast Concept Resolution
     # -------------------------------------------------------------------------
     def fast_resolve_query(self, query: str) -> Dict[str, Any]:
+        if not self.ontology_store:
+            return {"query": query, "concepts": []}
+
         tokens = p5.tokenize(query)
         n = len(tokens)
         matches = []
