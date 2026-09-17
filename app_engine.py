@@ -139,8 +139,12 @@ class PipelineEngine:
             self.concept_index = None
 
         ontology_path = self.base_dir / "ontology_store.pkl"
+        lite_path = self.base_dir / "ontology_store_lite.pkl"
         if ontology_path.exists():
             with open(ontology_path, "rb") as f:
+                self.ontology_store = pickle.load(f)
+        elif lite_path.exists():
+            with open(lite_path, "rb") as f:
                 self.ontology_store = pickle.load(f)
         else:
             self.ontology_store = None
